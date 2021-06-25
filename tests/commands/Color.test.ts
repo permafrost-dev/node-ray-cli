@@ -13,6 +13,10 @@ beforeEach(() => {
     command.client = client;
 });
 
+it('has the correct name', () => {
+    expect(command.name()).toBe('color');
+});
+
 it('sends a color payload', () => {
     command.handle(<Argv>(<unknown>{ _: ['color'], quiet: true, uuid: 'fakeUuid', color: 'red' }));
 

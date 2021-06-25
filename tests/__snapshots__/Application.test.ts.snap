@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`adds commands 1`] = `
+Array [
+  Object {
+    "description": "test one ",
+    "name": "one",
+    "options": [Function],
+  },
+  Object {
+    "description": "test two ",
+    "name": "two",
+    "options": [Function],
+  },
+]
+`;
+
+exports[`creates aliases 1`] = `
+Array [
+  Object {
+    "alias": "verbose",
+    "name": "v",
+  },
+  Object {
+    "alias": "version",
+    "name": "V",
+  },
+]
+`;

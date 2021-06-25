@@ -1,7 +1,11 @@
 //const yargs = require('yargs');
 
 export class Application {
-    public y = require('yargs')(process.argv.slice(2));
+    public y;
+
+    constructor(yargs: any = null) {
+        this.y = yargs ?? require('yargs')(process.argv.slice(2));
+    }
 
     public commandClass = (...cmdClasses: any) => {
         cmdClasses.forEach(instance => {

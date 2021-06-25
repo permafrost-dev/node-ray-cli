@@ -14,6 +14,10 @@ beforeEach(() => {
     command.client = client;
 });
 
+it('has the correct name', () => {
+    expect(command.name()).toBe('send');
+});
+
 it('sends a payload', () => {
     command.handle(<Argv>(<unknown>{ _: ['send'], quiet: true, data: 'test data' }));
 
