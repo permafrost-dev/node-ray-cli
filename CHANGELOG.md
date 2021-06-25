@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to `permafrost-dev/package-skeleton` will be documented in this file.
+All notable changes to `permafrost-dev/node-ray-cli` will be documented in this file.
 
 ---
 

@@ -1,7 +1,7 @@
 {
-    "name": "package-skeleton",
+    "name": "node-ray-cli",
     "version": "1.0.0",
-    "description": "{{package.description}}",
+    "description": "Debug cli scripts with ray to fix problems faster",
     "main": "dist/index.js",
     "scripts": {
         "test": "./node_modules/.bin/jest tests --verbose",
@@ -15,7 +15,7 @@
         "dev": "npm run build:dev && node dist/index.js",
         "prepare": "husky install"
     },
-    "author": "{{package.author.name}} <{{package.author.email}}>",
+    "author": "Patrick Organ <patrick@permafrost.dev>",
     "license": "MIT",
     "lint-staged": {
         "*.{js,ts}": [
