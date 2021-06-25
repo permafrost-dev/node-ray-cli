@@ -12,6 +12,7 @@ export abstract class Command {
     public static instance: Command;
 
     public client: any = null;
+
     public uuid: string | null = null;
 
     public argv: Argv | null = null;
@@ -32,27 +33,13 @@ export abstract class Command {
         this.argv = argv;
     }
 
-    public execute(argv) {
-        if (!Command.instance.command.length) {
-            throw new Error('Command string not defined!');
-        }
-
-        return Command.instance.handle(argv);
-    }
-
     public displayUuid(instance: Ray) {
         if (this.argv === null) {
             return;
         }
 
-        if (typeof this.argv['quiet'] === 'undefined') {
+        if (typeof this.argv['quiet'] === 'undefined' || this.argv['quiet'] === false) {
             console.log(instance.uuid);
         }
-    }
-
-    public static create(): Command {
-        const thisClass = classOf(this);
-
-        return new thisClass();
     }
 }

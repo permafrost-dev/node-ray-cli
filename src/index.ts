@@ -19,7 +19,7 @@ if (argv['_'].length === 1) {
 
     if (!commandNames.includes(argv['_'][0] ?? '')) {
         argv['data'] = argv['_'][0];
-        new Send().execute(argv);
+        new Send().handle(argv);
     }
 } else {
     app.y.showHelp();
