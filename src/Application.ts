@@ -5,7 +5,6 @@ export class Application {
 
     public commandClass = (...cmdClasses: any) => {
         cmdClasses.forEach(instance => {
-            //const instance = cmdClass();
             this.y = this.y.command(instance.command, instance.help, instance.builder, instance.handle);
         });
 
