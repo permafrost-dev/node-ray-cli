@@ -16,8 +16,11 @@ TODO
 | --- | --- |
 | `clear` | Clear the current screen |
 | `color <uuid> <color>` | Change the color of a payload that has already been sent |
+| `file <filename>` | Show the contents of `filename` |
 | `hide-app` | Hide the Ray app |
-| `send <payload>` | Send `payload` to Ray |
+| `html <content>` | Display rendered html |
+| `send <payload>` | Send a payload to Ray |
+| `show-app` | Show the Ray app |
 
 ## Development Setup
 
