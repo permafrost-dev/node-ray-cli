@@ -7,6 +7,7 @@ import { Html } from './commands/Html';
 import { Image } from './commands/Image';
 import { Json } from './commands/Json';
 import { Notify } from './commands/Notify';
+import { Pause } from './commands/Pause';
 import { Send } from './commands/Send';
 import { ShowApp } from './commands/ShowApp';
 
@@ -19,6 +20,7 @@ const commands = [
     new Image(),
     new Json(),
     new Notify(),
+    new Pause(),
     new Send(),
     new ShowApp(),
 ];

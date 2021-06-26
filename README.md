@@ -19,6 +19,9 @@ TODO
 | `file <filename>` | Show the contents of `filename` |
 | `hide-app` | Hide the Ray app |
 | `html <content>` | Display rendered html |
+| `image <location>` | Display an image from a URL or file |
+| `notify <message>` | Display a desktop notification |
+| `pause` | Pause code execution |
 | `send <payload>` | Send a payload to Ray |
 | `show-app` | Show the Ray app |
 
