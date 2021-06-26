@@ -35,6 +35,6 @@ export class Send extends Command {
             }
         });
 
-        this.displayUuid(instance);
+        super.displayUuid(instance);
     }
 }

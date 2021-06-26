@@ -3,6 +3,7 @@
 export class FakeYargs {
     public commandList: any[] = [];
     public aliases: Record<string, string>[] = [];
+    public helpOption: any = null;
 
     public argv = {};
 
@@ -23,6 +24,8 @@ export class FakeYargs {
     }
 
     help(option) {
+        this.helpOption = option;
+
         return this;
     }
 }

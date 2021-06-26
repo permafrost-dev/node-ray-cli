@@ -27,3 +27,49 @@ Array [
   },
 ]
 `;
+
+exports[`runs the application 1`] = `
+Array [
+  Object {
+    "description": "change to color of a previously sent payload",
+    "name": "color <uuid> <color>",
+    "options": [Function],
+  },
+]
+`;
+
+exports[`runs the application 2`] = `
+Array [
+  Object {
+    "alias": "help",
+    "name": "h",
+  },
+]
+`;
+
+exports[`runs the application 3`] = `"h"`;
+
+exports[`runs the application and uses send as the default command 1`] = `
+Array [
+  Object {
+    "meta": Array [],
+    "payloads": Array [
+      Object {
+        "content": Object {
+          "values": Array [
+            "test message",
+          ],
+        },
+        "origin": Object {
+          "file": "/src/commands/Send.ts",
+          "function_name": "xxxx",
+          "hostname": "fake-host",
+          "line_number": 999,
+        },
+        "type": "log",
+      },
+    ],
+    "uuid": "fakeUuid",
+  },
+]
+`;

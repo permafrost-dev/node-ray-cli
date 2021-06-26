@@ -1,14 +1,21 @@
 //const yargs = require('yargs');
 
+import { Command } from './commands/Command';
+import { Send } from './commands/Send';
+
 export class Application {
     public y;
+    public client: any;
 
-    constructor(yargs: any = null) {
+    constructor(yargs: any = null, client: any = null, uuid: string | null = null) {
         this.y = yargs ?? require('yargs')(process.argv.slice(2));
+        this.client = client;
+        this.client.uuid = uuid;
     }
 
     public commandClass = (...cmdClasses: any) => {
         cmdClasses.forEach(instance => {
+            instance.client = this.client;
             this.y = this.y.command(instance.command, instance.help, instance.builder, instance.handle);
         });
 
@@ -29,5 +36,37 @@ export class Application {
 
     get argv() {
         return this.y.argv;
+    }
+
+    public run(commands: Command[]) {
+        commands.forEach(command => {
+            command.client = this.client;
+            command.uuid = this.client.uuid;
+            this.commandClass(command);
+        });
+
+        this.help('h').alias('h', 'help');
+
+        const argv = this.argv;
+
+        if (argv['_'].length === 1) {
+            const commandNames = commands.map(command => command.name());
+
+            if (!commandNames.includes(argv['_'][0] ?? '')) {
+                argv['data'] = argv['_'][0];
+
+                const cmd = new Send();
+
+                cmd.client = this.client;
+                cmd.uuid = this.client.uuid;
+                cmd.handle(argv);
+            }
+
+            return;
+        }
+
+        if (process.env.NODE_ENV !== 'test') {
+            this.y.showHelp();
+        }
     }
 }

@@ -37,6 +37,10 @@ export abstract class Command {
             return;
         }
 
+        if (process.env.NODE_ENV === 'test') {
+            return;
+        }
+
         if (typeof this.argv['quiet'] === 'undefined' || this.argv['quiet'] === false) {
             console.log(instance.uuid);
         }
