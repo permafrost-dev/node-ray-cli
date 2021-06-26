@@ -1,25 +1,25 @@
 /* eslint-disable no-undef */
-import { HideApp } from '@/commands/HideApp';
+import { Html } from '@/commands/Html';
 import { FakeClient } from '@tests/TestClasses/FakeClient';
 import { Argv } from 'yargs';
 
 let client: FakeClient;
-let command: HideApp;
+let command: Html;
 
 beforeEach(() => {
     client = new FakeClient();
 
-    command = new HideApp();
+    command = new Html();
     command.uuid = 'fakeUuid';
     command.client = client;
 });
 
 it('has the correct name', () => {
-    expect(command.name()).toBe('hide-app');
+    expect(command.name()).toBe('html');
 });
 
-it('sends a hide app payload', () => {
-    command.handle(<Argv>(<unknown>{ _: ['hide-app'], quiet: true }));
+it('sends an html payload', () => {
+    command.handle(<Argv>(<unknown>{ _: ['html'], quiet: true, content: '<strong>test data</strong>' }));
 
     expect(client.sentPayloads()).toMatchSnapshot();
 });

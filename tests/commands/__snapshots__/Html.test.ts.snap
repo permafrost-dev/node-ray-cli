@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sends an html payload 1`] = `
+Array [
+  Object {
+    "meta": Array [],
+    "payloads": Array [
+      Object {
+        "content": Object {
+          "content": "<strong>test data</strong>",
+          "label": "HTML",
+        },
+        "origin": Object {
+          "file": "/src/commands/Html.ts",
+          "function_name": "xxxx",
+          "hostname": "fake-host",
+          "line_number": 999,
+        },
+        "type": "custom",
+      },
+    ],
+    "uuid": "fakeUuid",
+  },
+]
+`;
