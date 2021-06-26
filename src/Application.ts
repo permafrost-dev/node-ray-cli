@@ -70,7 +70,7 @@ export class Application {
                 const cmd = new Send();
 
                 cmd.client = this.client;
-                cmd.uuid = this.client.uuid;
+                cmd.uuid = this.client?.uuid ?? null;
                 cmd.handle(argv);
             }
 
