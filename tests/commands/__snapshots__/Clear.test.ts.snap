@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sends a clear payload 1`] = `
+Array [
+  Object {
+    "meta": Array [],
+    "payloads": Array [
+      Object {
+        "content": Object {
+          "name": "",
+        },
+        "origin": Object {
+          "file": "/src/commands/Clear.ts",
+          "function_name": "xxxx",
+          "hostname": "fake-host",
+          "line_number": 999,
+        },
+        "type": "new_screen",
+      },
+    ],
+    "uuid": "fakeUuid",
+  },
+]
+`;

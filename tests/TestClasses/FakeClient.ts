@@ -36,6 +36,7 @@ export class FakeClient {
             //payload.data.origin.file = this.convertToUnixPath(payload.data.origin.file);
             payload.data.origin.line_number = 999;
             payload.data.origin.hostname = 'fake-host';
+            payload.uuid = 'fakeUuid';
 
             if (payload.getType() === 'color' || payload.getType() === 'size') {
                 payload.data.origin.file = '/tests/Ray.test.ts';

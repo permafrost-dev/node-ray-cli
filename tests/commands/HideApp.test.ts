@@ -11,6 +11,7 @@ beforeEach(() => {
 
     command = new HideApp();
     command.client = client;
+    command.uuid = 'fakeUuid';
 });
 
 it('has the correct name', () => {

@@ -9,7 +9,7 @@ export class HideApp extends Command {
     public override handle(argv: Argv) {
         super.handle(argv);
 
-        const instance = Ray.create(this.client, null);
+        const instance = Ray.create(this.client, this.uuid);
 
         instance.hideApp();
     }

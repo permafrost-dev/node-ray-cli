@@ -10,6 +10,7 @@ beforeEach(() => {
     client = new FakeClient();
 
     command = new Clear();
+    command.uuid = 'fakeUuid';
     command.client = client;
 });
 
