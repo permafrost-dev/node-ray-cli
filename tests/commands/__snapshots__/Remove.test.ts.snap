@@ -1,21 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`sends an notify payload 1`] = `
+exports[`sends a remove payload 1`] = `
 Array [
   Object {
     "meta": Array [],
     "payloads": Array [
       Object {
-        "content": Object {
-          "value": "test message",
-        },
+        "content": Object {},
         "origin": Object {
-          "file": "/src/commands/Notify.ts",
+          "file": "/src/commands/Remove.ts",
           "function_name": "xxxx",
           "hostname": "fake-host",
           "line_number": 999,
         },
-        "type": "notify",
+        "type": "remove",
       },
     ],
     "uuid": "fakeUuid",

@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`sends an notify payload 1`] = `
+exports[`sends an pause payload 1`] = `
 Array [
   Object {
     "meta": Array [],
     "payloads": Array [
       Object {
         "content": Object {
-          "value": "test message",
+          "name": "xxxxx",
         },
         "origin": Object {
-          "file": "/src/commands/Notify.ts",
+          "file": "/test/file.js",
           "function_name": "xxxx",
           "hostname": "fake-host",
           "line_number": 999,
         },
-        "type": "notify",
+        "type": "create_lock",
       },
     ],
     "uuid": "fakeUuid",
