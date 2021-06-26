@@ -2,6 +2,8 @@
 
 ---
 
+[![codecov](https://codecov.io/gh/permafrost-dev/node-ray-cli/branch/main/graph/badge.svg?token=Z3KgrLJ6L2)](https://codecov.io/gh/permafrost-dev/node-ray-cli)
+
 
 Debug cli scripts with ray to fix problems faster
 
