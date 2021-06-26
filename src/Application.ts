@@ -10,7 +10,11 @@ export class Application {
     constructor(yargs: any = null, client: any = null, uuid: string | null = null) {
         this.y = yargs ?? require('yargs')(process.argv.slice(2));
         this.client = client;
-        this.client.uuid = uuid;
+        try {
+            this.client.uuid = uuid;
+        } catch (err) {
+            //
+        }
     }
 
     public commandClass = (...cmdClasses: any) => {
@@ -41,7 +45,13 @@ export class Application {
     public run(commands: Command[]) {
         commands.forEach(command => {
             command.client = this.client;
-            command.uuid = this.client.uuid;
+
+            try {
+                command.uuid = this.client.uuid;
+            } catch (err) {
+                //
+            }
+
             this.commandClass(command);
         });
 
