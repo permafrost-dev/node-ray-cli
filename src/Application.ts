@@ -43,6 +43,8 @@ export class Application {
     }
 
     public run(commands: Command[]) {
+        this.y = this.y.scriptName('ray');
+
         commands.forEach(command => {
             command.client = this.client;
 
