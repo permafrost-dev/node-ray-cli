@@ -28,4 +28,8 @@ export class FakeYargs {
 
         return this;
     }
+
+    scriptName(name) {
+        return this;
+    }
 }

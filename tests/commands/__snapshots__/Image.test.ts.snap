@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sends an image payload 1`] = `
+Array [
+  Object {
+    "meta": Array [],
+    "payloads": Array [
+      Object {
+        "content": Object {
+          "content": "<img src=\\"https://placekitten.com/200/300\\" alt=\\"\\" />",
+          "label": "Image",
+        },
+        "origin": Object {
+          "file": "/src/commands/Image.ts",
+          "function_name": "xxxx",
+          "hostname": "fake-host",
+          "line_number": 999,
+        },
+        "type": "custom",
+      },
+    ],
+    "uuid": "fakeUuid",
+  },
+]
+`;

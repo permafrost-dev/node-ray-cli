@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sends an image payload 1`] = `
+Array [
+  Object {
+    "meta": Array [],
+    "payloads": Array [
+      Object {
+        "content": Object {
+          "value": "test message",
+        },
+        "origin": Object {
+          "file": "/src/commands/Notify.ts",
+          "function_name": "xxxx",
+          "hostname": "fake-host",
+          "line_number": 999,
+        },
+        "type": "notify",
+      },
+    ],
+    "uuid": "fakeUuid",
+  },
+]
+`;
