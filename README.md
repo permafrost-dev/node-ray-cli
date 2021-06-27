@@ -20,6 +20,7 @@ TODO
 | `hide-app` | Hide the Ray app |
 | `html <content>` | Display rendered html |
 | `image <location>` | Display an image from a URL or file |
+| `json <content>` | Display formatted JSON |
 | `notify <message>` | Display a desktop notification |
 | `pause` | Pause code execution |
 | `send <payload>` | Send a payload to Ray |
@@ -29,8 +30,8 @@ TODO
 
 ```bash
 npm install
-
-npm run dev
+npm run build:dev
+node dist/index.js --help
 ```
 
 ## Testing
