@@ -1,6 +1,6 @@
 {
     "name": "node-ray-cli",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "Debug cli scripts with ray to fix problems faster",
     "author": "Patrick Organ <patrick@permafrost.dev>",
     "license": "MIT",
