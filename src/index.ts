@@ -11,6 +11,8 @@ import { Pause } from './commands/Pause';
 import { Remove } from './commands/Remove';
 import { Send } from './commands/Send';
 import { ShowApp } from './commands/ShowApp';
+import { Text } from './commands/Text';
+import { Xml } from './commands/Xml';
 
 const commands = [
     new Clear(),
@@ -25,6 +27,8 @@ const commands = [
     new Remove(),
     new Send(),
     new ShowApp(),
+    new Text(),
+    new Xml(),
 ];
 
 new Application().run(commands);
