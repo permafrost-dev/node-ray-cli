@@ -3,7 +3,6 @@
 /.husky
 /.vscode
 /coverage
-/dist/temp
 /node_modules
 /scripts
 /src
