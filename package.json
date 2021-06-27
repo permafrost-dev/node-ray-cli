@@ -25,6 +25,8 @@
         "build:dev": "npm run build:build-script && node scripts/build.js --dev",
         "build:prod": "npm run build:build-script && node scripts/build.js --prod",
         "dev": "npm run build:dev && node dist/index.js",
+        "preversion": "npm run test",
+        "postversion": "npm run build:prod",
         "prepare": "husky install"
     },
     "lint-staged": {
