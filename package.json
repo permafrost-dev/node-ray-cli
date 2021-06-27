@@ -11,7 +11,7 @@
     "bugs": {
         "url": "https://github.com/permafrost-dev/node-ray-cli/issues"
     },
-    "main": "dist/index.js",
+    "main": "dist/ray.js",
     "scripts": {
         "test": "./node_modules/.bin/jest tests --verbose",
         "test:coverage": "./node_modules/.bin/jest tests --coverage",
