@@ -45,5 +45,11 @@
     },
     "dependencies": {
         "node-ray": "^1.16.0"
+    },
+    "bin": {
+        "ray": "dist/ray"
+    },
+    "engines": {
+        "node": ">=12.20.0"
     }
 }
