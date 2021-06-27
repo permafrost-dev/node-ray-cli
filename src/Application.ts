@@ -42,8 +42,11 @@ export class Application {
 
     public run(commands: Command[]) {
         this.y = this.y.scriptName('ray');
-        // @ts-ignore
-        this.y = this.y.version(__APP_VERSION__); // eslint-disable-line no-undef
+
+        if (process.env.NODE_ENV !== 'test') {
+            // @ts-ignore
+            this.y = this.y.version(__APP_VERSION__); // eslint-disable-line no-undef
+        }
 
         commands.forEach(command => {
             command.client = this.client;
