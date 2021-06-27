@@ -25,6 +25,8 @@ TODO
 | `pause` | Pause code execution |
 | `send <payload>` | Send a payload to Ray |
 | `show-app` | Show the Ray app |
+| `text <data>` | Display a text string with whitespace preserved |
+| `xml <data>` | Display formatted XML |
 
 ## Development Setup
 
