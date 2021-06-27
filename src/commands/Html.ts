@@ -11,29 +11,7 @@ export class Html extends Command {
 
         const instance = Ray.create(this.client, this.uuid ?? argv['uuid']);
 
-        let content: string = argv['content'];
-        const readFromStdin = argv['stdin'] ?? false;
-
-        if (readFromStdin) {
-            content = '';
-
-            process.stdin.setEncoding('utf8');
-
-            process.stdin.on('readable', function () {
-                const chunk = process.stdin.read();
-                if (chunk !== null) {
-                    content += chunk;
-                }
-            });
-
-            process.stdin.on('end', () => {
-                console.log('end');
-                instance.html(content);
-                super.displayUuid(instance);
-            });
-
-            return;
-        }
+        const content: string = argv['content'];
 
         instance.html(content);
 
