@@ -16,5 +16,7 @@ export class Remove extends Command {
         instance.uuid = argv['uuid'];
 
         instance.remove();
+
+        super.afterHandle(instance);
     }
 }

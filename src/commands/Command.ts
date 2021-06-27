@@ -23,7 +23,7 @@ export abstract class Command {
     constructor(stdout: any = null) {
         Command.instance = this;
 
-        this.stdout = stdout ?? process.stdout;
+        Command.instance.stdout = stdout ?? process.stdout;
     }
 
     public name(): string {
@@ -35,7 +35,7 @@ export abstract class Command {
     };
 
     public handle(argv: Argv) {
-        this.argv = argv;
+        Command.instance.argv = argv;
 
         if (typeof process.env['NODE_RAY_DISABLED'] !== 'undefined' && process.env['NODE_RAY_DISABLED'] === '1') {
             return false;
@@ -43,13 +43,13 @@ export abstract class Command {
     }
 
     public hasArgument(name: string): boolean {
-        const argv = this.argv ?? {};
+        const argv = Command.instance.argv ?? {};
 
         return typeof argv[name] !== 'undefined';
     }
 
     public getArgument(name: string, defaultValue: any = null): any {
-        const argv = this.argv ?? {};
+        const argv = Command.instance.argv ?? {};
 
         return argv[name] ?? defaultValue;
     }
@@ -57,8 +57,32 @@ export abstract class Command {
     public displayUuid(instance: Ray | string) {
         const uuid: string = isString(instance) ? <string>instance : (<Ray>instance).uuid;
 
-        if (this.getArgument('show-uuid', false) === true) {
-            this.stdout.write(`${uuid}\n`);
+        if (Command.instance.getArgument('show-uuid', false) === true) {
+            Command.instance.stdout.write(`${uuid}\n`);
         }
+    }
+
+    public afterHandle(instance: Ray) {
+        const colorNames = ['blue', 'gray', 'green', 'orange', 'purple', 'red'];
+
+        const sizeNames = ['large', 'small'];
+
+        colorNames.forEach(colorName => {
+            if (Command.instance.getArgument(colorName, false) === true) {
+                instance.color(colorName);
+            }
+        });
+
+        sizeNames.forEach(sizeName => {
+            if (Command.instance.getArgument(sizeName, false) === true) {
+                instance.size(sizeName);
+            }
+        });
+
+        if (Command.instance.getArgument('hide', false) === true) {
+            instance.hide();
+        }
+
+        return;
     }
 }

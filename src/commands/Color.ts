@@ -17,5 +17,7 @@ export class Color extends Command {
         instance.color(argv['color']);
 
         super.displayUuid(instance);
+
+        super.afterHandle(instance);
     }
 }

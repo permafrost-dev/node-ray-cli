@@ -14,5 +14,7 @@ export class Clear extends Command {
         const instance = Ray.create(this.client, this.uuid);
 
         instance.clearScreen();
+
+        super.afterHandle(instance);
     }
 }

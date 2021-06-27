@@ -16,5 +16,7 @@ export class Xml extends Command {
         instance.xml(argv['data']);
 
         super.displayUuid(instance);
+
+        super.afterHandle(instance);
     }
 }

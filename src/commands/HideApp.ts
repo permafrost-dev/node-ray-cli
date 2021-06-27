@@ -14,5 +14,7 @@ export class HideApp extends Command {
         const instance = Ray.create(this.client, this.uuid);
 
         instance.hideApp();
+
+        super.afterHandle(instance);
     }
 }

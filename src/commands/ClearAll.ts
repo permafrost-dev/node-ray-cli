@@ -14,5 +14,7 @@ export class ClearAll extends Command {
         const instance = Ray.create(this.client, this.uuid ?? argv['uuid'] ?? null);
 
         instance.clearAll();
+
+        super.afterHandle(instance);
     }
 }

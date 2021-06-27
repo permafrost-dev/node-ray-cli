@@ -1,5 +1,6 @@
 import { Application } from './Application';
 import { Clear } from './commands/Clear';
+import { ClearAll } from './commands/ClearAll';
 import { Color } from './commands/Color';
 import { File } from './commands/File';
 import { HideApp } from './commands/HideApp';
@@ -16,6 +17,7 @@ import { Xml } from './commands/Xml';
 
 const commands = [
     new Clear(),
+    new ClearAll(),
     new Color(),
     new File(),
     new HideApp(),

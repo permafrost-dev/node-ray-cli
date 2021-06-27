@@ -16,5 +16,7 @@ export class Image extends Command {
         instance.image(argv['location']);
 
         super.displayUuid(instance);
+
+        super.afterHandle(instance);
     }
 }

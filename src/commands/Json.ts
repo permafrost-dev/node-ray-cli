@@ -16,5 +16,7 @@ export class Json extends Command {
         instance.json(argv['data']);
 
         super.displayUuid(instance);
+
+        super.afterHandle(instance);
     }
 }

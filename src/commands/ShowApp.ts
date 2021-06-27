@@ -14,5 +14,7 @@ export class ShowApp extends Command {
         const instance = Ray.create(this.client, this.uuid);
 
         instance.showApp();
+
+        super.afterHandle(instance);
     }
 }

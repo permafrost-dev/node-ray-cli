@@ -16,5 +16,7 @@ export class File extends Command {
         instance.file(argv['filename']);
 
         super.displayUuid(instance);
+
+        super.afterHandle(instance);
     }
 }

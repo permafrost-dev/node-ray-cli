@@ -16,5 +16,7 @@ export class Text extends Command {
         instance.text(argv['data']);
 
         super.displayUuid(instance);
+
+        super.afterHandle(instance);
     }
 }

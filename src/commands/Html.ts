@@ -18,5 +18,7 @@ export class Html extends Command {
         instance.html(content);
 
         super.displayUuid(instance);
+
+        super.afterHandle(instance);
     }
 }

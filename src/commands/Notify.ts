@@ -16,5 +16,7 @@ export class Notify extends Command {
         instance.notify(argv['message']);
 
         super.displayUuid(instance);
+
+        super.afterHandle(instance);
     }
 }
