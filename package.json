@@ -20,7 +20,10 @@
         "lint:fix": "./node_modules/.bin/eslint --ext ts,js --fix src/",
         "lint:staged": "./node_modules/.bin/lint-staged",
         "fix": "npm run fmt && npm run lint:fix",
-        "build:dev": "./node_modules/.bin/esbuild --platform=node --target=node14 --define:__APP_VERSION__=\"'1.0'\" --format=cjs --bundle --outdir=dist src/index.ts",
+        "build:build-script": "./node_modules/.bin/esbuild --platform=node --target=node14 --format=cjs --outdir=scripts scripts/build.ts",
+        "build:dev-esb": "./node_modules/.bin/esbuild --platform=node --target=node14 --define:__APP_VERSION__=\"'1.0'\" --format=cjs --bundle --outdir=dist src/index.ts",
+        "build:dev": "npm run build:build-script && node scripts/build.js --dev",
+        "build:prod": "npm run build:build-script && node scripts/build.js --prod",
         "dev": "npm run build:dev && node dist/index.js",
         "prepare": "husky install"
     },
