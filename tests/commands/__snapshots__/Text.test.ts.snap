@@ -1,20 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`sends an json payload 1`] = `
+exports[`sends a text payload 1`] = `
 Array [
   Object {
     "meta": Array [],
     "payloads": Array [
       Object {
         "content": Object {
-          "content": Array [
-            "one",
-            "two",
-          ],
-          "label": "JSON",
+          "content": "&nbsp;test <br>&nbsp;&nbsp;&nbsp;&nbsp;message",
+          "label": "Text",
         },
         "origin": Object {
-          "file": "/src/commands/Json.ts",
+          "file": "/src/commands/Text.ts",
           "function_name": "xxxx",
           "hostname": "fake-host",
           "line_number": 999,
