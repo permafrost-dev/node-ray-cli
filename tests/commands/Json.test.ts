@@ -18,7 +18,7 @@ it('has the correct name', () => {
     expect(command.name()).toBe('json');
 });
 
-it('sends an image payload', () => {
+it('sends an json payload', () => {
     command.handle(<Argv>(<unknown>{ _: ['json'], quiet: true, data: '["one", "two"]' }));
 
     expect(client.sentPayloads()).toMatchSnapshot();
