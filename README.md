@@ -45,6 +45,8 @@ npx node-ray-cli --help
 
 If no command name is specified, `send` is assumed.
 
+![image](https://user-images.githubusercontent.com/5508707/123550427-64da4300-d73b-11eb-9aa3-589b21d1fa11.png)
+
 When calling commands that send modifiable payloads, the payload uuid is sent to stdout **if** the `--show-uuid` option flag is provided.  For example, you may modify the color of a payload after it has been sent by using the `color` command:
 
 ```bash
