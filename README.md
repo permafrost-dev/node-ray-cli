@@ -161,9 +161,9 @@ node dist/index.js --help
 Code Coverage
 
 <p align="center">
-    <img src="https://codecov.io/gh/permafrost-dev/node-ray-cli/branch/main/graphs/commits.svg?token=Z3KgrLJ6L2" height="100" alt="codecov commits graph" />
+    <img src="https://codecov.io/gh/permafrost-dev/node-ray-cli/branch/main/graphs/commits.svg" height="100" alt="codecov commits graph" />
     <br>
-    <img src="https://codecov.io/gh/permafrost-dev/node-ray-cli/branch/main/graph/sunburst.svg?token=Z3KgrLJ6L2" height="200" alt="codecov sunburst graph" />
+    <img src="https://codecov.io/gh/permafrost-dev/node-ray-cli/branch/main/graph/sunburst.svg" height="200" alt="codecov sunburst graph" />
 </p>
 
 ---
