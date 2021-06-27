@@ -37,7 +37,7 @@ export abstract class Command {
     public handle(argv: Argv) {
         this.argv = argv;
 
-        if (typeof process.env['NODE_RAY_DISABLED'] !== 'undefined') {
+        if (typeof process.env['NODE_RAY_DISABLED'] !== 'undefined' && process.env['NODE_RAY_DISABLED'] === '1') {
             return false;
         }
     }

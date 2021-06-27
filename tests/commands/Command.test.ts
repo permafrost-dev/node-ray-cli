@@ -9,6 +9,10 @@ let stdout: FakeStdout;
 beforeEach(() => {
     stdout = new FakeStdout();
     cmd = new TestCommand(stdout);
+
+    if (typeof process.env['NODE_RAY_DISABLED'] !== 'undefined') {
+        delete process.env['NODE_RAY_DISABLED'];
+    }
 });
 
 it('gets the correct name from the command string', () => {
@@ -57,4 +61,11 @@ it('returns a default value when getting the value of a missing argument', () =>
     expect(cmd.getArgument('two', 'two2')).toBe('two2');
     expect(cmd.getArgument('verbose', false)).toBeFalsy();
     expect(cmd.getArgument('missing')).toBeNull();
+});
+
+it('can be disabled via an environment variable', () => {
+    process.env['NODE_RAY_DISABLED'] = '1';
+
+    expect(cmd.handle(<Argv>{})).toBeFalsy();
+    expect(stdout.writtenData).toHaveLength(0);
 });
