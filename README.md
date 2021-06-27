@@ -67,6 +67,31 @@ ray html '<em>hello world</em>'
 ray file message.txt
 ```
 
+## Disabling ray-cli
+
+The `ray` command can be disabled by setting the `NODE_RAY_DISABLED` environment variable to `"1"`:
+
+```bash
+export NODE_RAY_DISABLED="1"
+```
+
+## Available option flags
+
+There are several option flags that can be used with any command:
+
+| Flag | Description |
+| --- | --- |
+| `--hide` | Display the payload as collapsed by default |
+| `--large` | Display large text |
+| `--show-uuid` | Write the payload uuid to stdout |
+| `--small` | Display small text |
+| `--blue` | Display the payload as blue  |
+| `--gray` | Display the payload as gray  |
+| `--green` | Display the payload as green  |
+| `--orange` | Display the payload as orange  |
+| `--purple` | Display the payload as purple  |
+| `--red` | Display the payload as red  |
+
 ## Command reference
 
 | Command | Description |
@@ -103,7 +128,7 @@ fi
 FILENAME="$1"
 
 ray "$FILENAME"
-ray file "$FILENAME"
+ray file "$FILENAME" --purple --small --hide
 ray show-app
 
 if [ ! -e "$FILENAME" ]; then
