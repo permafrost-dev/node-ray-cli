@@ -48,13 +48,13 @@ If no command name is specified, `send` is assumed.
 When calling commands that send modifiable payloads, the payload uuid is sent to stdout.  For example, you may modify the color of a payload after it has been sent by using the `color` command:
 
 ```bash
-ray 'hello world' # writes "ae625128-ed3a-2b92-1a3f-2e0ebf7a2ad1" to stdout
+ray 'hello world' --show-uuid # writes "ae625128-ed3a-2b92-1a3f-2e0ebf7a2ad1" to stdout
 ray color ae625128-ed3a-2b92-1a3f-2e0ebf7a2ad1 green
 ```
 
 ...or remove the payload from Ray entirely:
 ```bash
-ray 'hello world' # writes "ae625128-ed3a-2b92-1a3f-2e0ebf7a2ad1" to stdout
+ray 'hello world' --show-uuid # writes "ae625128-ed3a-2b92-1a3f-2e0ebf7a2ad1" to stdout
 ray remove ae625128-ed3a-2b92-1a3f-2e0ebf7a2ad1
 ```
 
@@ -92,8 +92,8 @@ ray file message.txt
 ```bash
 #!/bin/bash
 
-RAYUUID=$(ray "arg count: $#")
-ray color $RAYUUID blue --quiet
+RAYUUID=$(ray "arg count: $#" --show-uuid)
+ray color $RAYUUID blue
 
 if [ $# -eq 0 ]; then
     echo "no filename provided"
@@ -102,12 +102,12 @@ fi
 
 FILENAME="$1"
 
-ray "$FILENAME" --quiet
-ray file "$FILENAME" --quiet
+ray "$FILENAME"
+ray file "$FILENAME"
 ray show-app
 
 if [ ! -e "$FILENAME" ]; then
-    ray send "file missing: $FILENAME" --red --quiet
+    ray send "file missing: $FILENAME" --red
     exit 1
 fi
 
