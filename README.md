@@ -2,7 +2,9 @@
 
 ---
 
-[![codecov](https://codecov.io/gh/permafrost-dev/node-ray-cli/branch/main/graph/badge.svg?token=Z3KgrLJ6L2)](https://codecov.io/gh/permafrost-dev/node-ray-cli)
+<p align="center">
+    <img src="https://shields.io/npm/v/node-ray-cli" alt="npm version"> <img src="https://shields.io/npm/dt/node-ray-cli" alt="npm downloads"> <img src="https://shields.io/github/license/permafrost-dev/node-ray-cli" alt="license"> <img src="https://github.com/permafrost-dev/vue-ray/workflows/Run%20Tests/badge.svg?branch=main" alt="test status"> <img src="https://codecov.io/gh/permafrost-dev/node-ray-cli/branch/main/graph/badge.svg?token=Z3KgrLJ6L2"/>
+</p>
 
 Debug cli scripts with ray to fix problems faster
 
