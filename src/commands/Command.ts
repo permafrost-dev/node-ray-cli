@@ -40,6 +40,12 @@ export abstract class Command {
         if (typeof process.env['NODE_RAY_DISABLED'] !== 'undefined' && process.env['NODE_RAY_DISABLED'] === '1') {
             return false;
         }
+
+        const ifOption = Command.instance.getArgument('if', null);
+
+        if (ifOption === 0 || ifOption === 'false' || ifOption === 'no') {
+            return false;
+        }
     }
 
     public hasArgument(name: string): boolean {
