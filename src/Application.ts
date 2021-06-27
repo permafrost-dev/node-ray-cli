@@ -1,5 +1,3 @@
-//const yargs = require('yargs');
-
 import { Command } from './commands/Command';
 import { Send } from './commands/Send';
 
@@ -44,6 +42,8 @@ export class Application {
 
     public run(commands: Command[]) {
         this.y = this.y.scriptName('ray');
+        // @ts-ignore
+        this.y = this.y.version(__APP_VERSION__); // eslint-disable-line no-undef
 
         commands.forEach(command => {
             command.client = this.client;
