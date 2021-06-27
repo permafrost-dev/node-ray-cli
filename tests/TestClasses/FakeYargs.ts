@@ -32,4 +32,8 @@ export class FakeYargs {
     scriptName(name) {
         return this;
     }
+
+    version(version) {
+        return this;
+    }
 }

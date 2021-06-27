@@ -40,13 +40,15 @@ export class Application {
         return this.y.argv;
     }
 
+    protected isRunningTests(): boolean {
+        return process.env.NODE_ENV === 'test';
+    }
+
     public run(commands: Command[]) {
         this.y = this.y.scriptName('ray');
 
-        if (process.env.NODE_ENV !== 'test') {
-            // @ts-ignore
-            this.y = this.y.version(__APP_VERSION__); // eslint-disable-line no-undef
-        }
+        // @ts-ignore
+        this.y = this.y.version(this.isRunningTests() ? '' : __APP_VERSION__); // eslint-disable-line no-undef
 
         commands.forEach(command => {
             command.client = this.client;
@@ -72,8 +74,8 @@ export class Application {
 
                 const cmd = new Send();
 
-                cmd.client = this.client;
                 cmd.uuid = this.client?.uuid ?? null;
+                cmd.client = this.client;
                 cmd.handle(argv);
             }
 
