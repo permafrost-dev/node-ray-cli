@@ -44,6 +44,16 @@ node dist/index.js --help
 
 ---
 
+Code Coverage
+
+<p align="center">
+    <img src="https://codecov.io/gh/permafrost-dev/node-ray-cli/branch/main/graphs/commits.svg?token=Z3KgrLJ6L2" height="100" alt="codecov commits graph" />
+    <br>
+    <img src="https://codecov.io/gh/permafrost-dev/node-ray-cli/branch/main/graph/sunburst.svg?token=Z3KgrLJ6L2" height="200" alt="codecov sunburst graph" />
+</p>
+
+---
+
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
