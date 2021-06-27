@@ -82,6 +82,7 @@ There are several option flags that can be used with any command:
 | Flag | Description |
 | --- | --- |
 | `--hide` | Display the payload as collapsed by default |
+| `--if=value` | Don't send the payload if `value` is `"false"`, `0`, or `"no"` |
 | `--large` | Display large text |
 | `--show-uuid` | Write the payload uuid to stdout |
 | `--small` | Display small text |
