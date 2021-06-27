@@ -15,6 +15,10 @@
 
 ---
 
+## Overview
+
+This npm package provides a `ray` script that lets you control [Spatie's Ray app](https://myray.app) from the command line.  It allows you to easily debug your CLI scripts.
+
 ## Installation
 
 Install the package normally with `npm`:
@@ -23,13 +27,38 @@ Install the package normally with `npm`:
 npm install node-ray-cli
 ```
 
-...or install it globally to be able to access it from any script/directory:
+...install it globally to be able to access it from any script/directory:
 
 ```bash
 npm install -g node-ray-cli
 ```
 
+...or run it without installing using `npx`:
+
+```bash
+npx node-ray-cli --help
+```
+
 ## Usage
+
+`ray <command name> <args, ...>`
+
+If no command name is specified, `send` is assumed.
+
+When calling commands that send modifiable payloads, the payload uuid is sent to stdout.  For example, you may modify the color of a payload after it has been sent by using the `color` command:
+
+```bash
+ray 'hello world' # writes "ae625128-ed3a-2b92-1a3f-2e0ebf7a2ad1" to stdout
+ray color ae625128-ed3a-2b92-1a3f-2e0ebf7a2ad1 green
+```
+
+...or remove the payload from Ray entirely:
+```bash
+ray 'hello world' # writes "ae625128-ed3a-2b92-1a3f-2e0ebf7a2ad1" to stdout
+ray remove ae625128-ed3a-2b92-1a3f-2e0ebf7a2ad1
+```
+
+Some other usage examples: 
 
 ```bash
 ray 'hello world' --blue
@@ -43,6 +72,7 @@ ray file message.txt
 | Command | Description |
 | --- | --- |
 | `clear` | Clear the current screen |
+| `clear-all` | Clear the current and all previous screens |
 | `color <uuid> <color>` | Change the color of a payload that has already been sent |
 | `file <filename>` | Show the contents of `filename` |
 | `hide-app` | Hide the Ray app |
@@ -51,6 +81,7 @@ ray file message.txt
 | `json <content>` | Display formatted JSON |
 | `notify <message>` | Display a desktop notification |
 | `pause` | Pause code execution |
+| `remove <uuid>` | Remove a payload |
 | `send <payload>` | Send a payload to Ray |
 | `show-app` | Show the Ray app |
 | `text <data>` | Display a text string with whitespace preserved |
