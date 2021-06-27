@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`displays the uuid if the correct argv flag is set 1`] = `
+Array [
+  "fakeUuid
+",
+]
+`;
