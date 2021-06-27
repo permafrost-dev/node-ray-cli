@@ -24,7 +24,7 @@
         "build:dev-esb": "./node_modules/.bin/esbuild --platform=node --target=node14 --define:__APP_VERSION__=\"'1.0'\" --format=cjs --bundle --outdir=dist src/index.ts",
         "build:dev": "npm run build:build-script && node scripts/build.js --dev",
         "build:prod": "npm run build:build-script && node scripts/build.js --prod",
-        "dev": "npm run build:dev && node dist/index.js",
+        "dev": "npm run build:dev && dist/ray",
         "preversion": "npm run test",
         "postversion": "npm run build:prod",
         "prepare": "husky install"
