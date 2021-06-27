@@ -31,4 +31,5 @@ const commands = [
     new Xml(),
 ];
 
+// @ts-ignore
 new Application().run(commands);

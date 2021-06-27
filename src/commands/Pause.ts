@@ -6,8 +6,11 @@ export class Pause extends Command {
     public override command = 'pause';
     public override help = 'Pause code execution';
 
+    // @ts-ignore
     public override async handle(argv: Argv) {
-        super.handle(argv);
+        if (super.handle(argv) === false) {
+            return new Promise(resolve => resolve(false));
+        }
 
         const instance = Ray.create(this.client, this.uuid ?? argv['uuid']);
 

@@ -7,7 +7,9 @@ export class Remove extends Command {
     public override help = 'Remove a previously sent payload';
 
     public override handle(argv: Argv) {
-        super.handle(argv);
+        if (super.handle(argv) === false) {
+            return false;
+        }
 
         const instance = Ray.create(this.client, argv['uuid']);
 

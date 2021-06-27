@@ -36,6 +36,10 @@ export abstract class Command {
 
     public handle(argv: Argv) {
         this.argv = argv;
+
+        if (typeof process.env['NODE_RAY_DISABLED'] !== 'undefined') {
+            return false;
+        }
     }
 
     public hasArgument(name: string): boolean {

@@ -7,7 +7,9 @@ export class Json extends Command {
     public override help = 'Display formatted JSON in Ray';
 
     public override handle(argv: Argv) {
-        super.handle(argv);
+        if (super.handle(argv) === false) {
+            return false;
+        }
 
         const instance = Ray.create(this.client, this.uuid ?? argv['uuid']);
 
