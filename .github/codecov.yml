@@ -35,5 +35,6 @@ comment:
 ignore:
   - "build/"
   - "dist/"
+  - "scripts/"
   - ".eslintrc.js"
   - "jest.config.js"
