@@ -112,6 +112,7 @@ There are several option flags that can be used with any command:
 | `remove <uuid>` | Remove a payload |
 | `send <payload>` | Send a payload to Ray |
 | `show-app` | Show the Ray app |
+| `size <uuid> <size>` | Change the text size of a payload that has already been sent _(sizes are 'large' or 'small')_ |
 | `text <data>` | Display a text string with whitespace preserved |
 | `xml <data>` | Display formatted XML |
 
