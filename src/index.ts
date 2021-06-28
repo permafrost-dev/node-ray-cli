@@ -12,6 +12,7 @@ import { Pause } from './commands/Pause';
 import { Remove } from './commands/Remove';
 import { Send } from './commands/Send';
 import { ShowApp } from './commands/ShowApp';
+import { Size } from './commands/Size';
 import { Text } from './commands/Text';
 import { Xml } from './commands/Xml';
 
@@ -29,6 +30,7 @@ const commands = [
     new Remove(),
     new Send(),
     new ShowApp(),
+    new Size(),
     new Text(),
     new Xml(),
 ];
