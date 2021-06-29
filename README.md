@@ -69,7 +69,7 @@ ray html '<em>hello world</em>'
 ray file message.txt
 ```
 
-## Disabling ray-cli
+## Disabling node-ray-cli
 
 The `ray` command can be disabled by setting the `NODE_RAY_DISABLED` environment variable to `"1"`:
 
