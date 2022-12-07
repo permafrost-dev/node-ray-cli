@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`sends an xml payload 1`] = `
-Array [
-  Object {
-    "meta": Array [],
-    "payloads": Array [
-      Object {
-        "content": Object {
+[
+  {
+    "meta": [],
+    "payloads": [
+      {
+        "content": {
           "content": "&lt;one&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;two&gt;&lt;/two&gt;<br>&lt;/one&gt;",
           "label": "XML",
         },
-        "origin": Object {
+        "origin": {
           "file": "/src/commands/Xml.ts",
           "function_name": "xxxx",
           "hostname": "fake-host",

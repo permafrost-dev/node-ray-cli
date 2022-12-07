@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`sends a collapsed payload 1`] = `
-Array [
-  Object {
-    "meta": Array [],
-    "payloads": Array [
-      Object {
-        "content": Object {
-          "values": Array [
+[
+  {
+    "meta": [],
+    "payloads": [
+      {
+        "content": {
+          "values": [
             "test data",
           ],
         },
-        "origin": Object {
+        "origin": {
           "file": "/src/commands/Send.ts",
           "function_name": "xxxx",
           "hostname": "fake-host",
@@ -22,12 +22,12 @@ Array [
     ],
     "uuid": "fakeUuid",
   },
-  Object {
-    "meta": Array [],
-    "payloads": Array [
-      Object {
-        "content": Object {},
-        "origin": Object {
+  {
+    "meta": [],
+    "payloads": [
+      {
+        "content": {},
+        "origin": {
           "file": "/src/commands/Send.ts",
           "function_name": "xxxx",
           "hostname": "fake-host",
@@ -38,12 +38,12 @@ Array [
     ],
     "uuid": "fakeUuid",
   },
-  Object {
-    "meta": Array [],
-    "payloads": Array [
-      Object {
-        "content": Object {},
-        "origin": Object {
+  {
+    "meta": [],
+    "payloads": [
+      {
+        "content": {},
+        "origin": {
           "file": "/src/commands/Command.ts",
           "function_name": "xxxx",
           "hostname": "fake-host",
@@ -58,17 +58,17 @@ Array [
 `;
 
 exports[`sends a payload 1`] = `
-Array [
-  Object {
-    "meta": Array [],
-    "payloads": Array [
-      Object {
-        "content": Object {
-          "values": Array [
+[
+  {
+    "meta": [],
+    "payloads": [
+      {
+        "content": {
+          "values": [
             "test data",
           ],
         },
-        "origin": Object {
+        "origin": {
           "file": "/src/commands/Send.ts",
           "function_name": "xxxx",
           "hostname": "fake-host",
@@ -83,17 +83,17 @@ Array [
 `;
 
 exports[`sends a payload with color 1`] = `
-Array [
-  Object {
-    "meta": Array [],
-    "payloads": Array [
-      Object {
-        "content": Object {
-          "values": Array [
+[
+  {
+    "meta": [],
+    "payloads": [
+      {
+        "content": {
+          "values": [
             "test data",
           ],
         },
-        "origin": Object {
+        "origin": {
           "file": "/src/commands/Send.ts",
           "function_name": "xxxx",
           "hostname": "fake-host",
@@ -104,14 +104,14 @@ Array [
     ],
     "uuid": "fakeUuid",
   },
-  Object {
-    "meta": Array [],
-    "payloads": Array [
-      Object {
-        "content": Object {
+  {
+    "meta": [],
+    "payloads": [
+      {
+        "content": {
           "color": "red",
         },
-        "origin": Object {
+        "origin": {
           "file": "/tests/Ray.test.ts",
           "function_name": "xxxx",
           "hostname": "fake-host",
@@ -122,14 +122,14 @@ Array [
     ],
     "uuid": "fakeUuid",
   },
-  Object {
-    "meta": Array [],
-    "payloads": Array [
-      Object {
-        "content": Object {
+  {
+    "meta": [],
+    "payloads": [
+      {
+        "content": {
           "color": "red",
         },
-        "origin": Object {
+        "origin": {
           "file": "/tests/Ray.test.ts",
           "function_name": "xxxx",
           "hostname": "fake-host",
