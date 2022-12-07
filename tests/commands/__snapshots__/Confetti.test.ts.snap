@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sends a confetti payload 1`] = `
+[
+  {
+    "meta": [],
+    "payloads": [
+      {
+        "content": {},
+        "origin": {
+          "file": "/src/commands/Confetti.ts",
+          "function_name": "xxxx",
+          "hostname": "fake-host",
+          "line_number": 999,
+        },
+        "type": "confetti",
+      },
+    ],
+    "uuid": "fakeUuid",
+  },
+]
+`;
