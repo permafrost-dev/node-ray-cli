@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`sends a confetti payload 1`] = `
-Array [
-  Object {
-    "meta": Array [],
-    "payloads": Array [
-      Object {
-        "content": Object {},
-        "origin": Object {
+[
+  {
+    "meta": [],
+    "payloads": [
+      {
+        "content": {},
+        "origin": {
           "file": "/src/commands/Confetti.ts",
           "function_name": "xxxx",
           "hostname": "fake-host",
