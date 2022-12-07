@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`sends a size payload 1`] = `
-Array [
-  Object {
-    "meta": Array [],
-    "payloads": Array [
-      Object {
-        "content": Object {
+[
+  {
+    "meta": [],
+    "payloads": [
+      {
+        "content": {
           "size": "large",
         },
-        "origin": Object {
+        "origin": {
           "file": "/tests/Ray.test.ts",
           "function_name": "xxxx",
           "hostname": "fake-host",

@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`sends an pause payload 1`] = `
-Array [
-  Object {
-    "meta": Array [],
-    "payloads": Array [
-      Object {
-        "content": Object {
+[
+  {
+    "meta": [],
+    "payloads": [
+      {
+        "content": {
           "name": "xxxxx",
         },
-        "origin": Object {
-          "file": "/test/file.js",
+        "origin": {
+          "file": "/src/commands/Pause.ts",
           "function_name": "xxxx",
           "hostname": "fake-host",
           "line_number": 999,
