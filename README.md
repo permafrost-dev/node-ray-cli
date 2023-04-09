@@ -102,6 +102,7 @@ There are several option flags that can be used with any command:
 | `clear` | Clear the current screen |
 | `clear-all` | Clear the current and all previous screens |
 | `color <uuid> <color>` | Change the color of a payload that has already been sent |
+| `confetti` | Display confetti in Ray! |
 | `file <filename>` | Show the contents of `filename` |
 | `hide-app` | Hide the Ray app |
 | `html <content>` | Display rendered html |
