@@ -2,6 +2,7 @@ import { Application } from './Application';
 import { Clear } from './commands/Clear';
 import { ClearAll } from './commands/ClearAll';
 import { Color } from './commands/Color';
+import { Confetti } from './commands/Confetti';
 import { File } from './commands/File';
 import { HideApp } from './commands/HideApp';
 import { Html } from './commands/Html';
@@ -20,6 +21,7 @@ const commands = [
     new Clear(),
     new ClearAll(),
     new Color(),
+    new Confetti(),
     new File(),
     new HideApp(),
     new Html(),
