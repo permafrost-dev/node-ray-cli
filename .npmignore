@@ -18,3 +18,4 @@ jest.config.js
 package-lock.json
 tsconfig.json
 *.ignore
+.eslintignore
